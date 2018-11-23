@@ -5,6 +5,10 @@ python:
 
 install:
   - pip install -r tests/requirements.txt
+  - pip install --user codecov
 
 script:
   - pytest --cov=./admitad
+
+after_success:
+  - codecov
