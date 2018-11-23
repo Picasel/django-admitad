@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='django-admitad',
-    version='0.0.1',
+    version='0.0.2',
     packages=['admitad'],
     install_requires=[
         'Django>=2.0',
@@ -15,7 +15,7 @@ setup(
     classifiers=[
         "Framework :: Django",
         "Intended Audience :: Developers",
-        "License :: MIT License",
+        "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3.7",
         "Topic :: Software Development :: Libraries :: Python Modules"
