@@ -8,3 +8,4 @@ install:
 
 script:
   - pytest --cov=./admitad
+  - codecov
