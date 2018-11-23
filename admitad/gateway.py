@@ -1,19 +1,5 @@
-from django.apps import apps
 from django.conf import settings
 import requests
-
-
-def get_order_model(app, model_name):
-    return apps.get_model(app, model_name)
-
-
-def is_model_field_exists(app, model_name, field_name):
-    model = get_order_model(app, model_name)
-
-    if getattr(model, field_name):
-        return True
-
-    return False
 
 
 def send_order_creation_request(order, currency_code='rub', payment_type='sale'):
@@ -64,8 +50,12 @@ class Order:
         if items:
             self.items += items
 
+    def __eq__(self, obj):
+        return self.__dict__ == obj.__dict__
+
     def add_item(self, item):
-        return self.items.append(item)
+        self.items.append(item)
+        return True
 
     @property
     def full_price(self):
@@ -89,6 +79,13 @@ class Item:
         self.internal_id = internal_id
         self.item_price = item_price
         self.quantity = quantity
+
+    def __eq__(self, obj):
+        return self.__dict__ == obj.__dict__
+
+    @property
+    def price(self):
+        return self.item_price
 
     @property
     def full_price(self):
