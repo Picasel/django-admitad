@@ -1,5 +1,8 @@
 # django-admitad
-Приложения для интеграции с Admitad CPA посредством postback-запросов
+[![Python versions](https://img.shields.io/pypi/pyversions/django-admitad.svg)](https://pypi.python.org/pypi/django-admitad)
+[![Pypi](https://img.shields.io/pypi/v/django-admitad.svg)](https://pypi.python.org/pypi/django-admitad)
+
+Приложение для интеграции с Admitad CPA посредством postback-запросов
 
 ## Requirements
 
