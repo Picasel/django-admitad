@@ -33,6 +33,7 @@ def send_order_creation_request(order, currency_code='rub', payment_type='sale')
             'product_id': item.internal_id,
             'quantity': item.quantity,
             'price': item.item_price,
+            'currency_code': item.currency_code
         })
 
         response = requests.get(admitad_postback_url, params=request_args)
@@ -75,8 +76,9 @@ class Item:
     Item object
     """
 
-    def __init__(self, internal_id, item_price, quantity=1):
+    def __init__(self, internal_id, item_price, quantity=1, currency_code='rub'):
         self.internal_id = internal_id
+        self.currency_code = currency_code
         self.item_price = item_price
         self.quantity = quantity
 
