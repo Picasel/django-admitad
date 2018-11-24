@@ -55,11 +55,17 @@ class Order:
         return self.__dict__ == obj.__dict__
 
     def add_item(self, item):
+        """
+        Adds item t order
+        """
         self.items.append(item)
         return True
 
     @property
     def full_price(self):
+        """
+        Returns order full price
+        """
         price = 0
         for item in self.items:
             price += item.full_price
@@ -68,6 +74,9 @@ class Order:
 
     @property
     def items_count(self):
+        """
+        Returns the items count in the order
+        """
         return len(self.items)
 
 
@@ -87,8 +96,14 @@ class Item:
 
     @property
     def price(self):
+        """
+        Returns price per item
+        """
         return self.item_price
 
     @property
     def full_price(self):
+        """
+        Returns full price including quantity
+        """
         return self.item_price * self.quantity
