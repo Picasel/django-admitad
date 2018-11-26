@@ -5,7 +5,7 @@ from admitad.gateway import Item
 
 @pytest.fixture(scope='function')
 def item():
-    return Item(internal_id=1, item_price=100, quantity=5)
+    return Item(internal_id=1, item_price=100, tariff_code=1, quantity=5)
 
 
 def test_item_internal_id(item):

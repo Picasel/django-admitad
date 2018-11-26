@@ -6,13 +6,13 @@ from admitad.gateway import Item, Order
 
 @pytest.fixture(scope='module')
 def item():
-    return Item(internal_id=1, item_price=100, quantity=5)
+    return Item(internal_id=1, item_price=100, tariff_code=1, quantity=5)
 
 
 @pytest.fixture(scope='module')
 def order():
-    return Order(internal_id=1, admitad_uid=12345,
-                 action_code='test', tariff_code='sale', items=[Item(1, 100, 5)])
+    return Order(internal_id=1, admitad_uid=12345, action_code='test',
+                 items=[Item(internal_id=1, item_price=100, tariff_code=1, quantity=5)])
 
 
 def test_order_equivalence_by_dict(order):
