@@ -11,13 +11,12 @@ class Order:
     """
     items = []
 
-    def __init__(self, internal_id , admitad_uid, action_code, tariff_code,
+    def __init__(self, internal_id, admitad_uid, action_code,
                  payment_type=AdmitadPostbackEvent.SALE, items=None):
 
         self.internal_id = internal_id
         self.admitad_uid = admitad_uid
         self.action_code = action_code
-        self.tariff_code = tariff_code
         self.payment_type = payment_type
 
         if items:
@@ -105,7 +104,6 @@ class Order:
             'campaign_code': settings.ADMITAD_COMPAIN_CODE,
             'order_id': self.internal_id,
             'action_code': self.action_code,
-            'tariff_code': self.tariff_code,
             'position_count': self.items_count,
             'payment_type': self.payment_type,
             'postback': 1,
@@ -116,6 +114,7 @@ class Order:
             request_params = base_params.copy()
             request_params.update({
                 'position_id': position,
+                'tariff_code': item.tariff_code,
                 'product_id': item.internal_id,
                 'quantity': item.quantity,
                 'price': item.item_price,
@@ -130,10 +129,11 @@ class Item:
     Item object
     """
 
-    def __init__(self, internal_id, item_price, quantity=1, currency_code='rub'):
+    def __init__(self, internal_id, item_price, tariff_code, quantity=1, currency_code='rub'):
         self.internal_id = internal_id
-        self.currency_code = currency_code
         self.item_price = item_price
+        self.tariff_code = tariff_code
+        self.currency_code = currency_code
         self.quantity = quantity
 
     def __eq__(self, obj):
