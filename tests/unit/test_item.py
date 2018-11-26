@@ -3,7 +3,7 @@ import pytest
 from admitad.gateway import Item
 
 
-@pytest.fixture(scope="module")
+@pytest.fixture(scope='function')
 def item():
     return Item(internal_id=1, item_price=100, quantity=5)
 
