@@ -11,7 +11,7 @@ def item():
 
 @pytest.fixture(scope='module')
 def order():
-    return Order(internal_id=1, postback_key='postback_key', admitad_uid=12345,
+    return Order(internal_id=1, admitad_uid=12345,
                  action_code='test', tariff_code='sale', items=[Item(1, 100, 5)])
 
 
