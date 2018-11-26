@@ -11,11 +11,10 @@ class Order:
     """
     items = []
 
-    def __init__(self, internal_id, postback_key, admitad_uid, action_code, tariff_code,
+    def __init__(self, internal_id , admitad_uid, action_code, tariff_code,
                  payment_type=AdmitadPostbackEvent.SALE, items=None):
 
         self.internal_id = internal_id
-        self.postback_key = postback_key
         self.admitad_uid = admitad_uid
         self.action_code = action_code
         self.tariff_code = tariff_code
@@ -110,7 +109,7 @@ class Order:
             'position_count': self.items_count,
             'payment_type': self.payment_type,
             'postback': 1,
-            'postback_key': self.postback_key
+            'postback_key': settings.ADMITAD_POSTBACK_KEY
         }
 
         for position, item in enumerate(self.items):
