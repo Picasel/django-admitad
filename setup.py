@@ -2,8 +2,11 @@ from setuptools import setup
 
 setup(
     name='django-admitad',
-    version='1.0.4',
+    version='1.0.5',
     packages=['admitad'],
+    package_data={
+        'admitad': ['migrations/*.py']
+    },
     install_requires=[
         'Django>=2.0',
     ],
