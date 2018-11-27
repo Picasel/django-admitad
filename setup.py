@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='django-admitad',
-    version='1.0.2',
+    version='1.0.3',
     packages=['admitad'],
     install_requires=[
         'Django>=2.0',
