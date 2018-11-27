@@ -1,6 +1,6 @@
 # (WIP) django-admitad
-[![Build Status](https://travis-ci.org/k0t3n/django-admitad.svg?branch=master)](https://travis-ci.org/k0t3n/django-admitad)
-[![codecov](https://codecov.io/gh/k0t3n/django-admitad/branch/master/graph/badge.svg)](https://codecov.io/gh/k0t3n/django-admitad)
+[![Build Status](https://travis-ci.org/Picasel/django-admitad.svg?branch=master)](https://travis-ci.org/Picasel/django-admitad)
+[![codecov](https://codecov.io/gh/Picasel/django-admitad/branch/master/graph/badge.svg)](https://codecov.io/gh/Picasel/django-admitad)
 [![Python versions](https://img.shields.io/pypi/pyversions/django-admitad.svg)](https://pypi.python.org/pypi/django-admitad)
 [![Pypi](https://img.shields.io/pypi/v/django-admitad.svg)](https://pypi.python.org/pypi/django-admitad)
 
