@@ -33,11 +33,6 @@ class AbstractAdmitadPostbackEvent(models.Model):
         max_length=64
     )
 
-    tariff_code = models.CharField(
-        _('Tariff code'),
-        max_length=16
-    )
-
     CREATED, SUCCESS, FAILED = 'Created', 'Success', 'Failed'
     INTEGRATION_STATUS_CHOICES = (
         (CREATED, _('Created')),
@@ -115,6 +110,11 @@ class AbstractAdmitadPostbackRequest(models.Model):
     currency_code = models.CharField(
         _('Currency_code'),
         max_length=3
+    )
+
+    tariff_code = models.CharField(
+        _('Tariff code'),
+        max_length=16
     )
 
     price = models.DecimalField(
