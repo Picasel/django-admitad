@@ -68,7 +68,7 @@ class Order:
             postback_request = AdmitadPostbackRequest.objects.create(
                 event=event,
                 product_id=params['product_id'],
-                position_id=params['position'],
+                position_id=params['position_id'],
                 quantity=params['quantity'],
                 currency_code=params['currency_code'],
                 tariff_code=params['tariff_code'],
@@ -85,7 +85,7 @@ class Order:
                     is_failed = True
                     postback_request.mark_as_failed(response.content)
 
-                postback_request.mark_as.success()
+                postback_request.mark_as_success()
 
         if is_failed:
             event.mark_as_failed()
@@ -129,11 +129,11 @@ class Item:
     Item object
     """
 
-    def __init__(self, internal_id, item_price, tariff_code, quantity=1, currency_code='rub'):
+    def __init__(self, internal_id, item_price, tariff_code, quantity=1, currency_code='RUB'):
         self.internal_id = internal_id
         self.item_price = item_price
         self.tariff_code = tariff_code
-        self.currency_code = currency_code
+        self.currency_code = currency_code.upper()
         self.quantity = quantity
 
     def __eq__(self, obj):
