@@ -110,7 +110,7 @@ class Order:
             'postback_key': settings.ADMITAD_POSTBACK_KEY
         }
 
-        for position, item in enumerate(self.items):
+        for position, item in enumerate(self.items, start=1):
             request_params = base_params.copy()
             request_params.update({
                 'position_id': position,
