@@ -4,6 +4,10 @@ import sys
 
 abspath = lambda *p: os.path.abspath(os.path.join(*p))
 
+ADMITAD_COMPAIN_CODE = 'example'
+ADMITAD_POSTBACK_URL = 'https://ad.admitad.com/r'
+ADMITAD_POSTBACK_KEY = 'example'
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = '%5k=ep*ns75^y$7t90g=ixl!1fnsmijqtwqcrg%3d2j3*tjk2k'

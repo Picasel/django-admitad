@@ -61,7 +61,6 @@ class Order:
             campaign_code=settings.ADMITAD_COMPAIN_CODE,
             payment_type=self.payment_type,
             action_code=self.action_code,
-            tariff_code=self.tariff_code
         )
 
         is_failed = False
@@ -72,6 +71,7 @@ class Order:
                 position_id=params['position'],
                 quantity=params['quantity'],
                 currency_code=params['currency_code'],
+                tariff_code=params['tariff_code'],
                 price=params['price'],
                 request_url=add_params_to_url(settings.ADMITAD_POSTBACK_URL, params)
             )
