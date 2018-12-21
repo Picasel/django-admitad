@@ -62,6 +62,8 @@ order.send_postback_requests()
 All sent requests and parameters are saved to the database and are accessible from the admin
 ![test](https://pp.userapi.com/c847017/v847017946/135ac6/7i7AL8Y_DFE.jpg)
 
+## Changelog
+[Available here](https://github.com/Picasel/django-admitad/blob/master/CHANGELOG.md)
 
 ## TODO
  * Celery integration
