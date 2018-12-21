@@ -2,13 +2,13 @@ from setuptools import setup
 
 setup(
     name='django-admitad',
-    version='1.0.5',
+    version='1.1.0',
     packages=['admitad'],
     package_data={
         'admitad': ['migrations/*.py']
     },
     install_requires=[
-        'Django>=2.0',
+        'Django>=1.11',
     ],
     url='https://github.com/Picasel/django-admitad',
     license='MIT License',
