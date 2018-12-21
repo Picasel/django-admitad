@@ -8,7 +8,7 @@ setup(
         'admitad': ['migrations/*.py']
     },
     install_requires=[
-        'Django>=2.0',
+        'Django>=1.11',
     ],
     url='https://github.com/Picasel/django-admitad',
     license='MIT License',
