@@ -8,6 +8,7 @@ python:
   - "3.7-dev"  # 3.7 development branch
 
 install:
+  - sudo apt install --only-upgrade libsqlite3-0
   - pip install -r tests/requirements.txt
   - pip install -e .
   - pip install codecov
