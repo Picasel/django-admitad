@@ -20,7 +20,7 @@ class Order:
         self.payment_type = payment_type
 
         if items:
-            self.items += items
+            self.items = items
 
     def __eq__(self, obj):
         return self.__dict__ == obj.__dict__
