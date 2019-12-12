@@ -9,7 +9,7 @@ class Order:
     """
     Order object
     """
-    # items = []
+    items = []
 
     def __init__(self, internal_id, admitad_uid, action_code,
                  payment_type=AdmitadPostbackEvent.SALE, items=None):
