@@ -9,7 +9,7 @@ class Order:
     """
     Order object
     """
-    items = []
+    # items = []
 
     def __init__(self, internal_id, admitad_uid, action_code,
                  payment_type=AdmitadPostbackEvent.SALE, items=None):
@@ -18,9 +18,7 @@ class Order:
         self.admitad_uid = admitad_uid
         self.action_code = action_code
         self.payment_type = payment_type
-
-        if items:
-            self.items = items
+        self.items = items
 
     def __eq__(self, obj):
         return self.__dict__ == obj.__dict__
